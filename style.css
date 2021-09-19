@@ -8,6 +8,7 @@
 html,
 body {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 .home-conatainer {
 	width: 100%;
@@ -33,8 +34,6 @@ body {
 }
 .inner-text i {
 	font-size: 3rem;
-}
-.burger-nav {
 }
 
 .logo {
@@ -88,44 +87,11 @@ a {
 .nav-links li:first-child {
 	text-decoration: underline;
 }
-@media screen and (max-width: 750px) {
-	/* body {
-		overflow-x: hidden;
-	} */
-	.nav-links {
-		position: absolute;
-		right: 0px;
-		height: 92vh;
-		top: 8vh;
-		background: rgba(49, 44, 44, 1);
-		color: white;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 50%;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in;
-	}
-	.nav-links li {
-		opacity: 1;
-	}
-	.burger-nav {
-		display: block;
-	}
-}
+
 .nav-active {
 	transform: translateX(0%);
 }
-@keyframes navLinksFade {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
+
 .burger-cross .line1 {
 	transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -324,7 +290,7 @@ a {
 	color: white;
 	padding: 10px;
 }
-.subscriber-container .signup-btn {
+.signup-btn {
 	height: 4.8vh;
 	padding: 10px;
 	text-align: center;
@@ -339,6 +305,13 @@ a {
 	border: none;
 	letter-spacing: 3px;
 	cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+	.signup-btn {
+		position: absolute;
+		top: 157px;
+		left: 500px;
+	}
 }
 .contact-details {
 	width: 70%;
@@ -456,5 +429,40 @@ footer {
 			'img10 img10 img10 img10'
 			'img10 img10 img10 img10'
 			'img11 img11 img11 img11';
+	}
+}
+@media screen and (max-width: 750px) {
+	/* body {
+		overflow-x: hidden;
+	} */
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background: rgba(49, 44, 44, 1);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.nav-links li {
+		opacity: 1;
+	}
+	.burger-nav {
+		display: block;
+	}
+}
+@keyframes navLinksFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
 	}
 }
