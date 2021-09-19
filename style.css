@@ -18,6 +18,23 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inner-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.inner-text h1 {
+	font-size: 5rem;
+}
+.inner-text i {
+	font-size: 3rem;
+}
+.burger-nav {
 }
 
 .logo {
@@ -29,14 +46,23 @@ body {
 /* Nav bar */
 .nav-bar {
 	width: 100%;
-	height: 10vh;
+	height: 8vh;
 	background: rgba(49, 44, 44, 1);
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	position: fixed;
+	top: 0px;
 	z-index: 100;
+}
+.nav-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 50%;
+}
+.nav-links li {
+	list-style: none;
 }
 .nav-list div {
 	display: block;
@@ -46,52 +72,96 @@ body {
 	margin: 6px;
 	padding: 0px;
 	border-radius: 1px;
+	transition: transform 0.5s ease-in;
+}
+.nav-list {
+	display: none;
+	cursor: pointer;
 }
 nav {
-	width: 50%;
-}
-nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	list-style: none;
-	align-items: center;
+	width: 100%;
 }
 a {
 	color: white;
 	text-decoration: none;
 }
-nav a:first-child {
+.nav-links li:first-child {
 	text-decoration: underline;
 }
-
+@media screen and (max-width: 750px) {
+	/* body {
+		overflow-x: hidden;
+	} */
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background: rgba(49, 44, 44, 1);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.nav-links li {
+		opacity: 1;
+	}
+	.burger-nav {
+		display: block;
+	}
+}
+.nav-active {
+	transform: translateX(0%);
+}
+@keyframes navLinksFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+.burger-cross .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.burger-cross .line2 {
+	opacity: 0;
+}
+.burger-cross .line3 {
+	transform: rotate(45deg) translate(-7.5px, -9.5px);
+}
 /* !Artist Section */
 .artist-container {
 	width: 100%;
 	height: 100vh;
-	margin: auto;
+	/* background-color: red; */
+	margin: 0 auto;
 }
 .artist-title {
 	text-align: center;
-	padding-top: 40px;
+	padding: 40px;
 	font-size: 3rem;
 	margin-bottom: 40px;
 	text-decoration: underline;
 }
+
 .artist-wrapper-container,
 .details {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 10px;
 }
 
-.details div {
-	/* margin-right: 18px; */
-	padding: 10px;
-}
 .details p {
 	word-spacing: 0px;
+	margin-top: 0px;
 }
 .artist-image {
 	width: 250px;
@@ -99,6 +169,7 @@ nav a:first-child {
 	cursor: pointer;
 	border-radius: 1px;
 	transition: all 0.5s ease;
+	border-radius: 5px;
 }
 .artist-image:hover {
 	transition: all 0.5s ease;
@@ -109,13 +180,13 @@ nav a:first-child {
 /* *Gallery conttainer */
 
 .gallery-container {
-	overflow: hidden;
+	/* overflow: hidden; */
 	width: 100%;
+	height: 100%;
 	max-width: 120rem;
-	margin: auto;
+	margin: 0 auto;
 	padding: 0 1.5rem;
 	margin-bottom: 16px;
-	/* display: flex; */
 }
 .gallery {
 	display: grid;
@@ -137,7 +208,7 @@ nav a:first-child {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* position: relative; */
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -146,8 +217,8 @@ nav a:first-child {
 .gallery a i {
 	color: rgba(225, 225, 225, 0.6);
 	font-size: 3rem;
-	/* position: relative;
-	z-index: 100; */
+	position: relative;
+	z-index: 100;
 	padding: 1rem 3rem;
 	border: 2px solid rgba(225, 225, 225, 0.6);
 	border-radius: 0.4rem;
@@ -218,7 +289,7 @@ nav a:first-child {
 /* $Contact Details */
 .contact-us-container {
 	width: 100%;
-	height: 88vh;
+	height: 85vh;
 	background-color: rgba(47, 43, 39, 1);
 	color: white;
 }
@@ -319,9 +390,32 @@ footer {
 	text-align: center;
 	padding: 10px;
 }
-
+/* Artist  */
+@media screen and (max-width: 900px) {
+	.artist-container {
+		width: 100%;
+		height: 100vh;
+	}
+	.artist-wrapper-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		/* width: 100%; */
+		/* height: 100vh; */
+	}
+	.details {
+		margin: 10px;
+	}
+	.details div {
+		margin-right: 10px;
+	}
+}
 /* Media for Gallery */
 @media screen and (max-width: 900px) {
+	.gallery-container {
+		margin-top: 500px;
+	}
 	.gallery {
 		grid-template-areas:
 			'img1 img1 img2 img2 '

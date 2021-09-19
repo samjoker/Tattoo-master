@@ -10,6 +10,7 @@
 			integrity="sha512-vZWT27aGmde93huNyIV/K7YsydxaafHLynlJa/4aPy28/R1a/IxewUH4MWo7As5I33hpQ7JS24kwqy/ciIFgvg=="
 			crossorigin="anonymous"
 		/>
+		<script src="./app.js" defer></script>
 		<link rel="stylesheet" href="./style.css" />
 		<title>Tattoo Master</title>
 	</head>
@@ -22,20 +23,24 @@
 							>Tattoo <i class="fas fa-crown" style="color: yellow"></i> Master</a
 						>
 					</div>
-					<nav>
-						<ul>
-							<a href="#home-tab">Home</a>
-							<a href="#artist-container">Artists</a>
-							<a href="#gallery-container">Tattoos</a>
-							<a href="#contact-us-container">Contact US</a>
-							<a href="#">About Us</a>
-							<div class="nav-list">
-								<div></div>
-								<div></div>
-								<div></div>
-							</div>
-						</ul>
-					</nav>
+					<ul class="nav-links">
+						<li><a href="#home-tab">Home</a></li>
+						<li><a href="#artist-container">Artists</a></li>
+						<li><a href="#gallery-container">Tattoos</a></li>
+
+						<li><a href="#contact-us-container">Contact US</a></li>
+
+						<li><a href="#">About Us</a></li>
+					</ul>
+					<div class="nav-list burger-nav">
+						<div class="line1"></div>
+						<div class="line2"></div>
+						<div class="line3"></div>
+					</div>
+				</div>
+				<div class="inner-text">
+					<h1>Tattoo <span>Master</span></h1>
+					<i class="fas fa-crown" style="color: yellow"></i>
 				</div>
 			</div>
 			<div class="artist-container" id="artist-container">
@@ -85,7 +90,7 @@
 				</div>
 			</div>
 			<div class="gallery-container" id="gallery-container">
-				<h2 class="artist-title">Galley</h2>
+				<h2 class="artist-title">Gallery</h2>
 				<div class="gallery">
 					<a href="./assest/img/Gallery/1.png" class="img1">
 						<i class="fas fa-expand"></i>
