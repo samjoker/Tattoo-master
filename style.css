@@ -316,7 +316,7 @@ a {
 	justify-content: space-around;
 	align-items: center;
 	margin: auto;
-	margin-top: 5em;
+	margin-top: 3em;
 	font-size: 1.2em;
 }
 .contact-details h2 {
@@ -370,10 +370,12 @@ footer {
 .footer-logo a {
 	font-size: 1.9rem;
 	margin: 0 20px;
+	text-align: center;
 }
 .footer-logo h2 {
 	margin-top: 10px;
 	font-size: 16px;
+	text-align: center;
 }
 .footer-logo {
 	display: flex;
@@ -381,11 +383,11 @@ footer {
 	align-items: center;
 	text-align: center;
 	padding: 10px;
-	margin-bottom: 5px;
+	/* margin-bottom: 5px; */
 }
 
 /* media query for nav links */
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 350px) and (max-width: 900px) {
 	.nav-links {
 		position: absolute;
 		right: 0px;
@@ -425,7 +427,7 @@ footer {
 	}
 }
 /* Artist  */
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 350px) and (max-width: 900px) {
 	.artist-container {
 		width: 100%;
 		height: 100vh;
@@ -490,7 +492,7 @@ footer {
 			'img11 img11 img11 img11';
 	}
 }
-/* Footer media querys */
+/* contact media querys */
 @media screen and (min-width: 350px) and (max-width: 900px) {
 	.contact-details {
 		width: 100%;
@@ -498,10 +500,36 @@ footer {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
+		padding: 20px;
 	}
 	.menu-details,
 	.contact,
 	.socail-medias {
-		font-size: 15px;
+		font-size: 14px;
+	}
+	.menu-details h2 {
+		font-size: 18px;
+	}
+	.contact h2 {
+		font-size: 18px;
+	}
+	.socail-medias h2 {
+		font-size: 18px;
+	}
+	.signup-btn {
+		font-size: 12px;
+		text-align: center;
+		margin-bottom: 10px;
+		text-transform: capitalize;
+	}
+}
+/* footer media queries */
+@media screen and (min-width: 350px) and (max-width: 900px) {
+	.footer-logo a {
+		font-size: 25px;
+		text-align: center;
+	}
+	.footer-logo h2 {
+		text-align: center;
 	}
 }
