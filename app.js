@@ -11,7 +11,6 @@ const navSlide = () => {
 			} else {
 				link.style.animation = `navLinksFade 0.5s ease forwards ${index / 5 + 0.6}s`;
 			}
-			console.log(index);
 		});
 		burger.classList.toggle('burger-cross');
 	});
