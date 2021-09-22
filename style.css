@@ -322,7 +322,14 @@ a {
 .contact-details h2 {
 	color: rgba(209, 93, 52, 1);
 }
-
+.menu-details,
+.contact,
+.socail-medias {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+}
 .menu-details a {
 	margin: 10px 0px;
 }
@@ -334,6 +341,11 @@ a {
 }
 .contact-details a {
 	display: block;
+}
+.one {
+	width: 10px;
+	height: 20vh;
+	border-right: 3px solid rgb(61, 58, 58);
 }
 .socail-medias p {
 	/* padding: 4px; */
@@ -371,6 +383,7 @@ footer {
 	padding: 10px;
 	margin-bottom: 5px;
 }
+
 /* media query for nav links */
 @media screen and (max-width: 750px) {
 	.nav-links {
