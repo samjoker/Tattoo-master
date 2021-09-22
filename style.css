@@ -378,8 +378,8 @@ footer {
 		right: 0px;
 		height: 92vh;
 		top: 8vh;
-		background: rgba(49, 44, 44, 1);
-		color: white;
+		background: white;
+		color: black;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -387,11 +387,15 @@ footer {
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
 	}
+	.nav-links a {
+		color: black;
+	}
 	.nav-active {
 		transform: translateX(0%);
 	}
 	.nav-links li {
 		opacity: 1;
+		color: black;
 	}
 	.burger-nav {
 		display: block;
